@@ -1,0 +1,17 @@
+.newsletter-text-image {
+  position: absolute;
+  color: white;
+  z-index: 1000001;
+  font-weight: 600;
+  top: 10rem;
+  padding-left: 1rem;
+  .year {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+  }
+  .month {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
