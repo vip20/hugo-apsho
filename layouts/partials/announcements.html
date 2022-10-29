@@ -25,6 +25,7 @@
               {{ range first 3 (where $.Site.RegularPages ".Section" "announcements") }}
                 <div class="testimonial-slider-item">
                   <p>{{ .Params.text }}</p>
+                  
                   <div class="testimonial-slider-person">
                     <!-- <div class="thumb">
                       <img src={{ .Params.image }} alt="person-thumb" />
@@ -34,6 +35,9 @@
                       <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
                     </div>
                   </div>
+                  <a href="{{ .Params.pdfURL }}" data-text="Download" class="btn btn-primary btn-download" target="_blank">
+                    <span>Download <i class="ti-download"></i></span>
+                  </a>
                 </div>
               {{ end }}
             </div>

@@ -1,6 +1,6 @@
 @import "variables";
 
-@import 'plugins/bootstrap.min';
+@import "plugins/bootstrap.min";
 
 @import "typography";
 
@@ -13,3 +13,11 @@
 @import "components/hero";
 
 @import "components/video";
+
+//overide
+
+.btn-download {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.675rem;
+  line-height: 1.5;
+}

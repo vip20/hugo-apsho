@@ -14,7 +14,7 @@
           <div class="col-lg-4 col-md-6">
             <article class="blog-post-item">
               <div class="blog-post-thumb" style="position: relative;">
-                <a href="{{ .Permalink }}">
+                <a href="{{ .Params.pdfURL }}" target="_blank">
                   <img src="{{ .Params.featureImage }}" alt="post-thumb" style="max-height: 250px;object-fit: cover;object-position: top;filter: brightness(0.7);"
                 /></a>
                 <div class="newsletter-text-image"
@@ -25,7 +25,7 @@
               </div>
               <div class="blog-post-content">
                 <h2>
-                  <a href="{{ .Permalink }}"
+                  <a href="{{ .Params.pdfURL }}" target="_blank"
                     >{{ .Title }}</a
                   >
                 </h2>
