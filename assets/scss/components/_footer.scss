@@ -2,15 +2,16 @@
   position: relative;
   padding: 5rem 0 5rem;
   overflow: hidden;
-  // background: url(../images/footer/footer-bg.svg);
-  background: #cef6f3;
+  background: url(../images/footer/footer-bg.svg);
+  // background: #cef6f3;
+  // background: white;
   background-position: top center;
   background-size: cover;
   @include mobile {
     padding: 120px 0 50px;
   }
   .primary-text {
-    color: #273437 !important;
+    color: $text-color-dark !important;
   }
   .logo {
     margin-bottom: 1rem;

@@ -1,23 +1,25 @@
 .hero {
+  height: calc(50vh + 140px);
   .overlay-banner {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 255, 255) !important;
-    opacity: 0.5;
+    // background-color: rgb(255, 255, 255) !important;
+    opacity: 0.8;
     z-index: 1;
+    background-color: #f9f2ea !important;
   }
   .container {
     z-index: 2;
     position: relative;
   }
   .description {
-    color: #273437;
+    color: $text-color-dark;
   }
   position: relative;
-  padding: 150px 0 100px;
+  padding: 100px 0 100px;
   overflow: hidden;
   @include desktop {
     text-align: center;
