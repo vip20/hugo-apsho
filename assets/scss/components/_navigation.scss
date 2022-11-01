@@ -5,6 +5,7 @@
   z-index: 99;
   top: 0;
   width: 100%;
+  background: #cef6f3;
 
   @include desktop {
     text-align: center;
@@ -132,7 +133,8 @@
   }
 
   &.nav-bg {
-    background: $white;
+    background: #cef6f3;
+
     padding: 15px;
     border: none;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);

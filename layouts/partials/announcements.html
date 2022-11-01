@@ -1,46 +1,53 @@
 {{ with .Site.Data.announcements }}
   {{ if .enable }}
-    <section class="testimonial">
+    <section class="blog-post" id="announcement">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="testimonial-content">
-              <h2>
-                {{ .title }}
-              </h2>
-              <p>
-                {{ .description }}
-              </p>
-              <div class="see-all-post col-12 pl-0">
-                <a href="{{ "announcements" | absURL }}" data-text="{{ .blogButtonText }}" class="btn btn-primary">
-                  <span>{{ .blogButtonText }}</span>
-                </a>
-              </div>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="section-title">
+              <h2>{{ .title }}</h2>
             </div>
-            
           </div>
-          <div class="col-lg-6">
-            <div class="testimonial-slider">
-              {{ $Section := .comments }}
-              {{ range first 3 (where $.Site.RegularPages ".Section" "announcements") }}
-                <div class="testimonial-slider-item">
-                  <p>{{ .Params.text }}</p>
-                  
-                  <div class="testimonial-slider-person">
-                    <!-- <div class="thumb">
-                      <img src={{ .Params.image }} alt="person-thumb" />
-                    </div> -->
-                    <div class="content ml-0">
-                      <h3> {{ .Params.name }} </h3>
-                      <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
-                    </div>
-                  </div>
-                  <a href="{{ .Params.pdfURL }}" data-text="Download" class="btn btn-primary btn-download" target="_blank">
-                    <span>Download <i class="ti-download"></i></span>
-                  </a>
+        </div>
+        <div class="row justify-content-center">
+          {{ range first 3 (where $.Site.RegularPages ".Section" "announcements") }}
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-post-item">
+              <div class="blog-post-thumb" style="position: relative;">
+                <a href="{{ .Permalink }}" target="_blank">
+                  <img src="{{ .Params.featureImage }}" alt="post-thumb" style="min-height: 250px;max-height: 250px;object-fit: cover;object-position: top;filter: brightness(0.7);"
+                /></a>
+                <div class="newsletter-text-image"
+                >
+                  <div class="month">{{.PublishDate.Format "Jan"}}</div>
+                  <div class="year">{{.PublishDate.Format "2006"}}</div>
                 </div>
-              {{ end }}
-            </div>
+              </div>
+              <div class="blog-post-content">
+                <h2>
+                  <a href="{{ .Permalink }}" target="_blank"
+                    >{{ .Title }}</a
+                  >
+                </h2>
+                <div class="post-author">
+                  {{ if .Params.authorThumb}}
+                  <!-- <div class="thumb">
+                    <img src="{{ .Params.authorThumb }}" alt="author-thumb" />
+                  </div> -->
+                  {{end}}
+                  <div class="meta">
+                    <h3>{{ .Params.author }}</h3>
+                    <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          {{ end }}
+          <div class="see-all-post col-12">
+            <a href="{{ "announcements" | absURL }}" data-text="{{ .blogButtonText }}" class="btn btn-primary">
+              <span>{{ .blogButtonText }}</span>
+            </a>
           </div>
         </div>
       </div>

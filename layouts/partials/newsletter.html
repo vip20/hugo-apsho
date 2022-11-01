@@ -1,6 +1,6 @@
 {{ with .Site.Data.newsletter }}
   {{ if .enable }}
-    <section class="blog-post" id="blog">
+    <section class="blog-post" id="newsletter">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -14,7 +14,7 @@
           <div class="col-lg-4 col-md-6">
             <article class="blog-post-item">
               <div class="blog-post-thumb" style="position: relative;">
-                <a href="{{ .Params.pdfURL }}" target="_blank">
+                <a href="{{ .Permalink }}" target="_blank">
                   <img src="{{ .Params.featureImage }}" alt="post-thumb" style="max-height: 250px;object-fit: cover;object-position: top;filter: brightness(0.7);"
                 /></a>
                 <div class="newsletter-text-image"
@@ -25,14 +25,16 @@
               </div>
               <div class="blog-post-content">
                 <h2>
-                  <a href="{{ .Params.pdfURL }}" target="_blank"
+                  <a href="{{ .Permalink }}" target="_blank"
                     >{{ .Title }}</a
                   >
                 </h2>
                 <div class="post-author">
-                  <div class="thumb">
+                  {{ if .Params.authorThumb}}
+                  <!-- <div class="thumb">
                     <img src="{{ .Params.authorThumb }}" alt="author-thumb" />
-                  </div>
+                  </div> -->
+                  {{end}}
                   <div class="meta">
                     <h3>{{ .Params.author }}</h3>
                     <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
@@ -43,7 +45,7 @@
           </div>
           {{ end }}
           <div class="see-all-post col-12">
-            <a href="{{ "newsletter" | absURL }}" data-text="{{ .blogButtonText }}" class="btn btn-primary">
+            <a href="{{ .Params.pdfURL }}" data-text="{{ .blogButtonText }}" class="btn btn-primary">
               <span>{{ .blogButtonText }}</span>
             </a>
           </div>

@@ -1,4 +1,21 @@
 .hero {
+  .overlay-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255) !important;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .container {
+    z-index: 2;
+    position: relative;
+  }
+  .description {
+    color: #273437;
+  }
   position: relative;
   padding: 150px 0 100px;
   overflow: hidden;

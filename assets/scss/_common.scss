@@ -101,3 +101,26 @@ a {
     }
   }
 }
+.page-header {
+  padding: 5rem 0 12.5rem;
+  h2.small {
+    font-size: 2rem;
+  }
+}
+.blog-single {
+  table {
+    width: 100% !important;
+  }
+}
+@media print {
+  nav,
+  footer {
+    display: none;
+  }
+  body {
+    margin-top: -6rem;
+  }
+  // .printable-area {
+  //   display: block;
+  // }
+}

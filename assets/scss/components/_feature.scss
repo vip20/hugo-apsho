@@ -1,6 +1,7 @@
 .feature {
   position: relative;
   overflow: hidden;
+  padding: 5rem 0rem;
 
   @include desktop {
     text-align: center;

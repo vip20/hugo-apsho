@@ -19,10 +19,15 @@
       {{ range (.Paginator 6).Pages }}
         <div class="col-lg-4 col-md-6">
           <article class="blog-post-item">
-            <div class="blog-post-thumb">
-              <a href="{{ .Permalink }}">
-                <img src="{{ .Params.featureImage | absURL }}" alt="blog-thumb"
+            <div class="blog-post-thumb" style="position: relative;">
+              <a href="{{ .Permalink }}" target="_blank">
+                <img src="{{ .Params.featureImage | absURL }}" alt="post-thumb" style="min-height: 250px;max-height: 250px;object-fit: cover;object-position: top;filter: brightness(0.7);"
               /></a>
+              <div class="newsletter-text-image"
+              >
+                <div class="month">{{.PublishDate.Format "Jan"}}</div>
+                <div class="year">{{.PublishDate.Format "2006"}}</div>
+              </div>
             </div>
             <div class="blog-post-content">
               <h2>
@@ -31,9 +36,9 @@
                 >
               </h2>
               <div class="post-author">
-                <div class="thumb">
+                <!-- <div class="thumb">
                   <img src="{{ .Params.authorThumb | absURL }}" alt="author-thumb" />
-                </div>
+                </div> -->
                 <div class="meta">
                   <h3>{{ .Params.author }}</h3>
                   <p>{{ .PublishDate.Format "January 2, 2006" }}</p>

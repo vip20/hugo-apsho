@@ -36,14 +36,27 @@
       </g>
     </svg>
   </div> -->
-  <div class="container">
+  <div class="overlay-banner"></div>
     <div class="row align-items-center">
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"
+   style="
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  left: 0;
+  " playbackrate="0.25">
+  <source src="{{.video}}" type="video/mp4">
+</video>
+<div class="container">
+    
       <div class="col-lg-6 order-2 order-lg-1">
         <div class="hero-content">
           <span class="hero-content-subtitle"> {{ .caption }} </span>
           <h1>{{ .title }}</h1>
-          <p>{{ .description }}</p>
-          <ul class="hero-content-buttons">
+          <p class="description">{{ .description }}</p>
+          <!-- <ul class="hero-content-buttons">
             <li>
               <a href="#" class="btn-platform">
                 <i>
@@ -96,13 +109,14 @@
                 </div>
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
       <div class="col-lg-6 order-1 order-lg-2">
         <!-- <div class="hero-image">
           <img src="{{ .image }}" alt="hero-img" />
         </div> -->
+        
       </div>
     </div>
   </div>
