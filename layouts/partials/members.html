@@ -1,0 +1,47 @@
+{{ with .Site.Data.members }}
+{{ if .enable }}
+<div>
+    <div class="mb-4">
+        <h6>President</h6>
+        
+        {{ range .president }}
+        <li class="d-block"><small>{{ . }}</small></li>
+        {{ end }}
+    </div>
+    <div class="mb-4">
+        <h6>Secretary</h6>
+        
+        {{ range .secretary }}
+        <li class="d-block"><small>{{ . }}</small></li>
+        {{ end }}
+    </div>
+    <div class="mb-4">
+        <h6>Organizing Committee</h6>
+        
+        {{ range .organizingCommittee }}
+        <li class="d-block"><small>{{ . }}</small></li>
+        {{ end }}
+    </div>
+</div>
+<!-- <section class="faq" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="faq-content">              
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="section-title">
+                  <h2>{{ .title }}</h2>
+                </div>
+              </div>
+            </div>
+              <p class="text-center">
+                {{ .description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+{{ end }}
+{{ end }}

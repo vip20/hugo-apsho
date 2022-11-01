@@ -42,9 +42,16 @@
 <section class="blog-single">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto">
+      <div class="col-lg-12 mx-auto">
         <article class="blog-single-post">
-          {{ .Content }}
+          <div class="row">
+            <div class="col-md-3">
+              {{ partial "members.html" .}}
+            </div>
+            <div class="col-md-9">
+            {{ .Content }}
+            </div>
+          </div>
         </article>
       </div>
     </div>
