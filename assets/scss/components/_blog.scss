@@ -202,6 +202,14 @@
       }
     }
     &-header {
+      hr {
+        border-top: 1px solid black !important;
+      }
+      .post-meta-min {
+        p {
+          color: $text-color-dark !important;
+        }
+      }
       .post-meta {
         margin: 50px auto 0;
         @include mobile {

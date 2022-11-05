@@ -19,11 +19,17 @@
         <h2 class="small">
           {{ .Title }}
         </h2>
-        <div class="post-meta">
+      <hr>
+        <div class="row justify-content-end">
+          <div class="col-3 post-meta-min">
+            <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
+          </div>
+      </div>
+        <!-- <div class="post-meta">
           <ul>
-            <!-- <li>
+            <li>
               <img src="{{ .Params.authorThumb | absURL }}" alt="author-thumb" />
-            </li> -->
+            </li>
             <li>
               <h5>
                 {{ .Params.author }}
@@ -33,7 +39,7 @@
               {{ .PublishDate.Format "January 2, 2006" }}
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
