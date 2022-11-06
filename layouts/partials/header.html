@@ -10,8 +10,11 @@
       />
     </a>
       {{if .Site.Params.companyTitle}}
-      <h3>
+      <h3 class="d-none d-md-block">
         {{.Site.Params.companyTitle}}
+      </h3>
+      <h3 class="d-block d-md-none">
+        {{.Site.Params.companyTitleShort}}
       </h3>
       {{end}}
     {{ "<!-- Toogle Button -->" | safeHTML }}
