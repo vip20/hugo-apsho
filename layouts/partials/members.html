@@ -2,24 +2,31 @@
 {{ if .enable }}
 <div>
     <div class="mb-4">
-        <h6>President</h6>
+        <h5>President</h5>
         
         {{ range .president }}
-        <li class="d-block"><small>{{ . }}</small></li>
+        <li class="d-block">{{ . }}</li>
         {{ end }}
     </div>
     <div class="mb-4">
-        <h6>Secretary</h6>
+        <h5>Secretary</h5>
         
         {{ range .secretary }}
-        <li class="d-block"><small>{{ . }}</small></li>
+        <li class="d-block">{{ . }}</li>
         {{ end }}
     </div>
     <div class="mb-4">
-        <h6>Organizing Committee</h6>
+        <h5>Treasurer</h5>
+        
+        {{ range .treasurer }}
+        <li class="d-block">{{ . }}</li>
+        {{ end }}
+    </div>
+    <div class="mb-4">
+        <h5>Organizing Committee</h5>
         
         {{ range .organizingCommittee }}
-        <li class="d-block"><small>{{ . }}</small></li>
+        <li class="d-block">{{ . }}</li>
         {{ end }}
     </div>
 </div>
