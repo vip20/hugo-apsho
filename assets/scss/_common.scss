@@ -130,6 +130,10 @@ a {
     background: white !important;
     padding: 0 !important;
   }
+  .members {
+    border-bottom: none;
+    border-right: 1px solid $text-color-dark;
+  }
   // .printable-area {
   //   display: block;
   // }
