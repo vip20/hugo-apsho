@@ -134,15 +134,20 @@
       margin-top: -100px;
     }
 
-    .members {
-      border-bottom: none;
-      border-right: 1px solid $text-color-dark;
+    .blog-main-content.custom {
+      border-top: none;
+      border-left: 1px solid $text-color-dark;
+      padding-top: 0px;
     }
 
     @media (max-width: 768px) {
+      .blog-main-content.custom {
+        border-left: none;
+        border-top: 1px solid $text-color-dark;
+        padding-top: 1.5rem;
+      }
       .members {
-        border-right: none;
-        border-bottom: 1px solid $text-color-dark;
+        margin-bottom: 1.5rem;
       }
     }
     &-post {
